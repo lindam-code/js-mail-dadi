@@ -47,8 +47,6 @@ var controlloEmail = false;
 var buttonLanciaDado = document.getElementById('lancia_dado');
 var giocoContainer = document.getElementById('gioco_container');
 var messaggioEmailErrata = document.getElementById('errore_email');
-var risultatoGioco;
-
 
 // Creo evento per entrare nel gioco se la mail è presente nella lista
 buttonInviaEmail.addEventListener('click',
@@ -82,7 +80,7 @@ buttonInviaEmail.addEventListener('click',
           console.log('Numero PC' + numeroPc);
           var numeroPcDocument = document.getElementById('numero_pc');
 
-
+          var risultatoGioco = '';
           var risutatoDadi = document.getElementById('risultato_dadi');
 
 
@@ -105,7 +103,7 @@ buttonInviaEmail.addEventListener('click',
             // Risultato del gioco
             tuoNumero.innerHTML = 'Tuo numero è: ' + numeroGiocatore;
             numeroPcDocument.innerHTML = 'Il numero generato dal PC è:  ' + numeroPc;
-            risutatoDadi.innerHTML = 'prova';
+            risutatoDadi.innerHTML = risutatoGioco;
 
           // messaggio errore se l'utente mette un numero non valido per il gioco
           } else {
