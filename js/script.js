@@ -14,21 +14,27 @@ for (var i = 0; i < listaEmail.length; i++) {
 if (controlloEmail) {
   console.log('Puoi entrare!!');
   // SCRIPT PER IL GIOCO DEI DADI
-  // Crea variabili numeri casuali dadi
+  // Crea variabili numeri dei dadi
   var numeroGiocatore = parseInt(prompt('Lancia il dado: scrivi un numero da 1 a 6!'));
   console.log('Numero giocatore: ' + numeroGiocatore);
   var numeroPc = Math.floor(Math.random() * 6) + 1;
-  console.log('Numero giocatore: ' + numeroPc);
+  console.log('Numero generato dal pc: ' + numeroPc);
 
   // Controllo del vincitore ai dadi
-  if (numeroGiocatore > numeroPc) {
-    console.log('Ha vinto il giocatore!');
-  } else if (numeroGiocatore < numeroPc) {
-    console.log('Ha vinto il PC!');
+  if (numeroGiocatore > 0 && numeroGiocatore < 7) {
+    if (numeroGiocatore > numeroPc) {
+      console.log('Ha vinto il giocatore!');
+    } else if (numeroGiocatore < numeroPc) {
+      console.log('Ha vinto il PC!');
+    } else {
+      console.log ('Parimerito!!');
+    }
+  } else if (isNaN(numeroGiocatore)) {
+    alert('Errore: devi inserire un numero da 1 a 6 valido.');
   } else {
-    console.log ('Parimerito!!');
+    alert('Errore: il numero inserito non è valido per il gioco dei dadi.');
   }
 } else {
-  console.log('La tua email non è nella lista degli invistati: non puoi entrare!')
+  console.log('La tua email non è nella lista degli invistati: non puoi entrare!');
 }
 // Fine script per il controllo dell'email
