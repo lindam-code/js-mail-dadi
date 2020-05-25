@@ -3,20 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Mail e gioco dadi</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- Gioco dei dadi -->
     <h1>Gioca al gioco dei dadi!!</h1>
+    <!-- Inizio verifica email -->
     <h2>Accedi al sito: verifica email.</h2>
     <label>Inserisci la tua email</label>
     <input id="email_utente" type="email">
     <button id="invio_email">Invia email di verifica</button>
-    <div class="gioco_container">
+    <!-- Fine verifica email -->
+
+    <!-- Inizio gioco dei dadi! -->
+    <div id="gioco_container" class="hidden">
       <h2>Ora giochiamo!!</h2>
       <label>inserisci un numero da 1 a 6</label>
       <input id="numero_utente" type="number">
       <button id="lancia_dado">Lancia il dado!!</button>
     </div>
+    <!-- Fine gioco dei dadi! -->
 
     <!-- Collegamento al JavaScript -->
     <script src="js/script.js"></script>

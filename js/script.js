@@ -45,6 +45,7 @@ var buttonInviaEmail = document.getElementById('invio_email');
 listaEmail = ['linda@gmail.com', 'alice@gmail.com', 'pippo@gmail.com', 'topolino@gmil.com', 'minnie@gmail.com', 'paperina@gmail.com'];
 var controlloEmail = false;
 var buttonLanciaDado = document.getElementById('lancia_dado');
+var giocoContainer = document.getElementById('gioco_container');
 
 // Creo evento per entrare nel gioco se la mail è presente nella lista
 buttonInviaEmail.addEventListener('click',
@@ -60,6 +61,7 @@ buttonInviaEmail.addEventListener('click',
     // Stampa risultato del controllo emailUtente
     if (controlloEmail) {
       console.log('Puoi entrare!');
+      giocoContainer.className = 'visible';
       // SCRIPT PER IL GIOCO DEI DADI
       // Crea variabili numeri dei dadi
       // Creo evento per lanciare il lancia_dado
