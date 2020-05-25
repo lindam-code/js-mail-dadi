@@ -9,10 +9,14 @@
     <!-- Gioco dei dadi -->
     <h1>Gioca al gioco dei dadi!!</h1>
     <!-- Inizio verifica email -->
-    <h2>Accedi al sito: verifica email.</h2>
+    <h2>Accedi al gioco: verifica email.</h2>
     <label>Inserisci la tua email</label>
     <input id="email_utente" type="email">
     <button id="invio_email">Invia email di verifica</button>
+
+    <div id="errore_email" class="hidden">
+      Email non valida!!
+    </div>
     <!-- Fine verifica email -->
 
     <!-- Inizio gioco dei dadi! -->
@@ -21,6 +25,9 @@
       <label>inserisci un numero da 1 a 6</label>
       <input id="numero_utente" type="number">
       <button id="lancia_dado">Lancia il dado!!</button>
+      <span id="tuo_numero"></span>
+      <span id="numero_pc"></span>
+      <h2 id="risultato_dadi"></h2>
     </div>
     <!-- Fine gioco dei dadi! -->
 
