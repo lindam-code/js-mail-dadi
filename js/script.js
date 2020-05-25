@@ -61,7 +61,6 @@ buttonInviaEmail.addEventListener('click',
     }
     // Risultato del controllo email utente
     if (controlloEmail) {
-      console.log('Puoi entrare!');
       giocoContainer.className = 'visible';
       messaggioEmailErrata.className = 'hidden';
 
@@ -73,11 +72,9 @@ buttonInviaEmail.addEventListener('click',
 
           // Dichiarazione variabili per il gioco
           var numeroGiocatore = document.getElementById('numero_utente').value;
-          console.log('Tuo numero' + numeroGiocatore);
           var tuoNumero = document.getElementById('tuo_numero');
 
           var numeroPc = Math.floor(Math.random() * 6) + 1;
-          console.log('Numero PC' + numeroPc);
           var numeroPcDocument = document.getElementById('numero_pc');
 
           var risultatoGioco = '';
@@ -88,16 +85,10 @@ buttonInviaEmail.addEventListener('click',
           if (numeroGiocatore > 0 && numeroGiocatore < 7) {
             if (numeroGiocatore > numeroPc) {
               risutatoGioco = 'Hai vinto!!!';
-              console.log('hai vinto');
-              console.log(risultatoGioco);
             } else if (numeroGiocatore < numeroPc) {
               risutatoGioco = 'Ha vinto il PC!';
-              console.log('Ha vinto il PC!');
-              console.log(risultatoGioco);
             } else {
               risutatoGioco ='Parimerito!!';
-              console.log('Parimerito!');
-              console.log(risultatoGioco);
             }
 
             // Risultato del gioco
@@ -113,7 +104,6 @@ buttonInviaEmail.addEventListener('click',
     )
     // Messaggio di errore se l'email non è valida
     } else {
-      console.log('La tua mail non è in lista!');
       messaggioEmailErrata.className = 'visible';
     }
   }
