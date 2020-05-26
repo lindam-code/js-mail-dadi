@@ -78,23 +78,23 @@ buttonInviaEmail.addEventListener('click',
           var numeroPcDocument = document.getElementById('numero_pc');
 
           var risultatoGioco = '';
-          var risutatoDadi = document.getElementById('risultato_dadi');
+          var risultatoDadi = document.getElementById('risultato_dadi');
 
 
           // Controllo del vincitore ai dadi
           if (numeroGiocatore > 0 && numeroGiocatore < 7) {
             if (numeroGiocatore > numeroPc) {
-              risutatoGioco = 'Hai vinto!!!';
+              risultatoGioco = 'Hai vinto!!!';
             } else if (numeroGiocatore < numeroPc) {
-              risutatoGioco = 'Ha vinto il PC!';
+              risultatoGioco = 'Ha vinto il PC!';
             } else {
-              risutatoGioco ='Parimerito!!';
+              risultatoGioco ='Parimerito!!';
             }
 
             // Risultato del gioco
             tuoNumero.innerHTML = 'Tuo numero è: ' + numeroGiocatore;
             numeroPcDocument.innerHTML = 'Il numero generato dal PC è:  ' + numeroPc;
-            risutatoDadi.innerHTML = risutatoGioco;
+            risultatoDadi.innerHTML = risultatoGioco;
 
           // messaggio errore se l'utente mette un numero non valido per il gioco
           } else {
